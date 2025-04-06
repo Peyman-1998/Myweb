@@ -1,0 +1,150 @@
+/* General Style */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  color: #4f9797cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #2c4550, #57345e);
+}
+
+.App {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #bbc1c2;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(101, 107, 141, 0.1);
+  text-align: center;
+  height: 100vh;  /* تنظیم ارتفاع صفحه به اندازه 100% ارتفاع صفحه نمایش */
+  color: white;  /* رنگ متن سفید برای وضوح بیشتر */
+}
+
+.App-header {
+  padding: 20px;
+}
+
+.profile-container {
+  margin-bottom: 30px;
+}
+
+.Profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(8, 189, 165, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-top: 15px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.bio {
+  margin-top: 40px;
+  text-align: justify;
+}
+
+.bio h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+.bio p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #2f4f6d;
+}
+
+.social-links {
+  margin-top: 40px;
+}
+
+.social-links h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #043f66;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #032033;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #043b3f;
+}
+
+footer p {
+  
+  font-style: italic;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .Profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .bio h2, .social-links h2 {
+    font-size: 1.5rem;
+  }
+
+  .bio p {
+    font-size: 1rem;
+  }
+}
+
+/* Logo Styling */
+.Logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  height: auto;
+  animation: logoAnimation 3s ease-in-out infinite;
+}
+
+/* Define Logo Animation */
+@keyframes logoAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
