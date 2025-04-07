@@ -1,150 +1,212 @@
-/* General Style */
-body {
-  margin: 0;
+/* اعمال فونت به تمام عناصر صفحه */
+* {
   font-family: 'Times New Roman', Times, serif;
-  color: #4f9797cc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #2c4550, #57345e);
+  box-sizing: border-box; /* Box sizing to ensure padding and borders don't affect the overall size */
 }
 
 .App {
-  width: 100%;
-  max-width: 800px;
+  font-family: Arial, sans-serif;
+  text-align: left;
   padding: 20px;
-  background-color: #bbc1c2;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(101, 107, 141, 0.1);
-  text-align: center;
-  height: 100vh;  /* تنظیم ارتفاع صفحه به اندازه 100% ارتفاع صفحه نمایش */
-  color: white;  /* رنگ متن سفید برای وضوح بیشتر */
 }
 
 .App-header {
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 20px;
+  height: 140vh;
 }
 
 .profile-container {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
 }
 
 .Profile-image {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(8, 189, 165, 0.1);
+  object-fit: cover; /* Ensures the image fits within the circle without distortion */
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-top: 15px;
+.profile-details {
+  text-align: left;
+}
+
+.profile-details h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* Darker text for better visibility */
 }
 
 .tagline {
-  font-size: 1.2rem;
-  color: #7f8c8d;
+  font-size: 16px;
+  color: #666;
   margin-top: 5px;
-  font-style: italic;
 }
 
-.bio {
-  margin-top: 40px;
-  text-align: justify;
+.profile-links {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 170px;
 }
 
-.bio h2 {
-  font-size: 1.8rem;
-  color: #2c3e50;
+.profile-links a {
+  margin: 10px 0;
+  text-decoration: none;
+  color: #0077cc;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.bio p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #2f4f6d;
+.profile-links a:hover {
+  color: #005fa3; /* Darker blue on hover */
+  text-decoration: underline;
+  transform: translateX(5px); /* Slight movement to the right on hover */
 }
 
+/* Main content */
+.main-content {
+  margin-left: 20px;
+}
+
+.bio, .contact, .projects {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: justify; /* This will justify the text */
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 12px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #0077cc;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+  color: #005fa3;
+  transform: translateX(5px);
+}
+
+/* Contact links */
 .social-links {
-  margin-top: 40px;
-}
-
-.social-links h2 {
-  font-size: 1.8rem;
-  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 .social-links a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #043f66;
-  color: white;
+  background-color: #e6f0fa;
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: #004080;
+  font-size: 16px;
+  font-weight: 500;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .social-links a:hover {
-  background-color: #032033;
+  background-color: #d0e6fa;
+  transform: translateX(5px);
 }
 
+.social-links a svg {
+  font-size: 18px; /* Adjust the icon size */
+}
+
+/* Footer */
 footer {
-  margin-top: 30px;
-  font-size: 1rem;
-  color: #043b3f;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  box-shadow: none;
 }
 
-footer p {
-  
-  font-style: italic;
-}
-
-/* Mobile Responsiveness */
+/* Responsive design */
 @media (max-width: 768px) {
+  .App-header {
+    flex-direction: column; /* Stacking content for smaller screens */
+    height: auto;
+  }
+
+  .profile-container {
+    align-items: center;
+    gap: 20px;
+  }
+
   .Profile-image {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
 
-  h1 {
-    font-size: 2rem;
+  .profile-links {
+    width: 200px; /* Adjust width for smaller screens */
   }
 
-  .tagline {
-    font-size: 1rem;
-  }
-
-  .bio h2, .social-links h2 {
-    font-size: 1.5rem;
-  }
-
-  .bio p {
-    font-size: 1rem;
+  .social-links a {
+    justify-content: center;
+    width: 100%;
   }
 }
 
-/* Logo Styling */
-.Logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 200px;
-  height: auto;
-  animation: logoAnimation 3s ease-in-out infinite;
-}
+@media (max-width: 600px) {
+  .profile-container {
+    align-items: center;
+    text-align: center;
+  }
 
-/* Define Logo Animation */
-@keyframes logoAnimation {
-  0% {
-    transform: rotate(0deg);
+  .profile-links {
+    width: 100%; /* Make profile links full width on small screens */
+    padding: 15px;
   }
-  50% {
-    transform: rotate(180deg);
+
+  .social-links {
+    gap: 12px;
   }
-  100% {
-    transform: rotate(360deg);
+
+  .social-links a {
+    width: 100%; /* Full width for social links */
+    justify-content: center;
   }
 }
